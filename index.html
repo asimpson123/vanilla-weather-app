@@ -16,6 +16,7 @@
       src="https://kit.fontawesome.com/7af3ea8a55.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -43,13 +44,13 @@
             <div class="extra-info">
               <ul>
                 <li class="humidity">Humidity: 63%</li>
-                <li class="wind-speed">Wind Speed: 10km p/h</li>
+                <li class="wind">Wind Speed: 10km p/h</li>
               </ul>
             </div>
           </div>
           <div class="col-1"></div>
           <div class="col-4">
-            <h1>Paris, Fr</h1>
+            <h1 id="city"></h1>
             <ul>
               <li class="date-time">Wednesday: 11:41</li>
               <li class="weather-description">Cloudy</li>

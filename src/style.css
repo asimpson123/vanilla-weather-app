@@ -40,6 +40,14 @@ i {
   text-transform: capitalize;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: -15px;
+  top: -15px;
+}
+
 .today-temp {
   font-size: 12px;
   color: #70757a;
@@ -49,6 +57,11 @@ i {
   left: 30px;
 }
 
+.units {
+  position: relative;
+  top: 12px;
+}
+
 .temperature {
   color: #202124;
   display: inline-block;
@@ -56,7 +69,6 @@ i {
   vertical-align: top;
   font-size: 48px;
   position: relative;
-  top: -10px;
 }
 .celsius-link {
   color: #202124;
@@ -83,6 +95,7 @@ i {
   line-height: 16px;
   padding-left: 0;
   position: relative;
+  top: 12px;
   left: -14px;
 }
 

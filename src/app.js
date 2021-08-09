@@ -40,8 +40,8 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
-let apiKey = "d918d4788f1c70d2f45815d886132c21";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
 let city = "Moscow";
+let apiKey = "d918d4788f1c70d2f45815d886132c21";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
 axios.get(apiUrl).then(displayTemperature);

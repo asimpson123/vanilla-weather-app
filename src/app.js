@@ -33,9 +33,15 @@ function displayTemperature(response) {
   )}km p/h`;
   let dateElement = document.querySelector(".date-time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "d918d4788f1c70d2f45815d886132c21";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
-
+let city = "Moscow";
 axios.get(apiUrl).then(displayTemperature);

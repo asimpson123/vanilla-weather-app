@@ -40,7 +40,7 @@ i {
   text-transform: capitalize;
 }
 
-img {
+.today-icon {
   display: block;
   margin: 0 auto;
   position: relative;
@@ -89,8 +89,6 @@ img {
   text-decoration: none;
 }
 
-
-
 .fahrenheit-link {
   color: #202124;
   display: inline-block;
@@ -127,29 +125,28 @@ li {
   padding: 0;
 }
 
-.buttons {
-  position: relative;
-  top: -10px;
-}
-
-button {
-  background: white;
-  border: none;
-  padding-top: 10px;
-  outline: 0;
-
-  cursor: pointer;
-  color: #222;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 1.58;
-  font-family: arial, sans-serif;
+.weather-forecast {
+  margin-top: -5px;
   text-align: center;
+  color: #000;
 }
 
-button:hover {
-  border-bottom: 3px solid #fbbc04;
+.weather-forecast-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
 
 small {

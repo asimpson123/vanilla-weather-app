@@ -33,11 +33,11 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 7 && index > 0) {
+    if (index < 6 && index > 0) {
       forecastHTML =
         forecastHTML +
         `
-      <div class="col-2">
+      <div class="col-3" id="forecast-column">
         <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
         <img
           class="weather-forecast-icon"
@@ -45,7 +45,7 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="36"
+          width="42"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max">${Math.round(
@@ -56,6 +56,7 @@ function displayForecast(response) {
           )}°</span>
         </div>
       </div>
+  
     
     `;
     }
@@ -79,8 +80,6 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("li.weather-description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-  let humidityElement = document.querySelector(".humidity");
-  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windElement = document.querySelector(".wind");
   windElement.innerHTML = `Wind Speed: ${Math.round(
     response.data.wind.speed

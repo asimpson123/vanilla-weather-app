@@ -20,37 +20,37 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="weather-app">
-        <form id="search-form" class="mb-3">
-          <div class="row">
-            <div class="col-10">
-              <input
-                type="search"
-                placeholder="Enter a city..."
-                class="form-control"
-                id="city-input"
-                autocomplete="off"
-              />
-            </div>
-            <div class="col-2">
-              <input type="submit" value="Search" class="btn btn-primary" />
-            </div>
-          </div>
-        </form>
+    <img
+      class="background-image"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/015/585/original/pexels-sterry-larson-3770090.jpg?1629477336"
+      alt="window"
+    />
 
+    <div class="weather-app">
+      <form id="search-form" class="mb-3">
         <div class="row">
-          <div class="col-1">
-            <img
-              class="today-icon"
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="clear"
-              id="icon"
-              class="float-left"
+          <div class="col-10">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              class="form-control"
+              id="city-input"
+              autocomplete="off"
             />
           </div>
-          <div class="col-3">
-            <div class="today-temp">
+          <div class="col-2">
+            <input type="submit" value="Search" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="col-7">
+          <h1 id="city"></h1>
+          <ul>
+            <li class="date-time">Wednesday: 11:41</li>
+
+            <li class="today-temp">
               <span class="temperature" id="temperature">19</span>
               <span class="units">
                 <a href="#" id="celsius-link" class="active"
@@ -58,28 +58,24 @@
                 >
                 |<a href="#" id="fahrenheit-link"> <strong>°F</strong></a>
               </span>
-            </div>
-          </div>
+            </li>
 
-          <div class="col-3">
-            <div class="extra-info">
-              <ul>
-                <li class="humidity">Humidity: 63%</li>
-                <li class="wind">Wind Speed: 10km p/h</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-1"></div>
-          <div class="col-4">
-            <h1 id="city"></h1>
-            <ul>
-              <li class="date-time">Wednesday: 11:41</li>
-              <li class="weather-description">Cloudy</li>
-            </ul>
-          </div>
+            <li class="weather-description">Cloudy</li>
+            <li class="wind">Wind Speed: 10km p/h</li>
+          </ul>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
+        <div class="col-1">
+          <img
+            class="today-icon"
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="clear"
+            id="icon"
+            class="float-left"
+          />
+        </div>
       </div>
+
+      <div class="weather-forecast" id="forecast"></div>
       <small>
         <a href="https://github.com/asimpson123/vanilla-weather-app"
           >Open-source code</a
